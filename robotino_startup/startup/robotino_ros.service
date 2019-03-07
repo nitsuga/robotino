@@ -1,0 +1,14 @@
+[Unit]
+Description=Robotino ROS startup service
+After=robotino-autostart.service
+
+[Service]
+Type=forking
+User=robotino
+TimeoutStopSec=60
+ExecStart=/home/robotino/ros/robotino/src/robotino/robotino_startup/startup/scripts/robotino_ros_service.sh start 
+ExecStop=/home/robotino/ros/robotino/src/robotino/robotino_startup/startup/scripts/robotino_ros_service.sh stop
+
+[Install]
+WantedBy=multi-user.target
+
