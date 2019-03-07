@@ -1,5 +1,5 @@
 <launch>
-  <arg name="map_file" value="$(find robotino_navigation)/maps/iff_sml.yaml" />
+  <arg name="map_file" default="$(find robotino_navigation)/maps/iff_sml.yaml" />
 
   <!--- Run mapserver -->
   <include file="$(find robotino_navigation)/launch/map_server.launch">
@@ -33,9 +33,8 @@
   <!--</node> -->
 
  
-  <!-- Run rviz 
-  <include file="$(find robotino_navigation)/launch/rviz.launch"/>
-  -->
+  <!-- Run rviz -->
+<!--  <include file="$(find robotino_navigation)/launch/rviz.launch"/> -->
 
   <!-- Run robotino_safety_node -->
   <include file="$(find robotino_safety)/launch/robotino_safety_node.launch"/>

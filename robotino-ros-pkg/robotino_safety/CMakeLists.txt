@@ -13,7 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
   tf
   visualization_msgs
 )
-set(CMAKE_MODULE_PATH /usr/local/robotino/api2/cmake)
+set(CMAKE_MODULE_PATH /opt/robotino/cmake)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
